@@ -1,310 +1,284 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Web Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Daniel Alonso | Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --bg: #050505;
-      --bg-soft: #0b0b0b;
-      --neon: #00ff88;
-      --neon-soft: rgba(0,255,136,0.15);
-      --text: #eaeaea;
-      --text-muted: #9a9a9a;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #0d0d0d, var(--bg));
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ---------- HEADER ---------- */
-    header {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent, #000 85%);
-      z-index: -1;
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      color: var(--neon);
-      text-shadow: 0 0 15px var(--neon-soft);
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.6rem;
-      border: 1px solid var(--neon);
-      color: var(--neon);
-      border-radius: 999px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: var(--neon);
-      color: #000;
-      box-shadow: 0 0 25px var(--neon);
-    }
-
-    /* ---------- SECTIONS ---------- */
-    section {
-      padding: 5rem 8%;
-    }
-
-    section h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      color: var(--neon);
-    }
-
-    /* ---------- SOBRE ---------- */
-    .about p {
-      max-width: 800px;
-      color: var(--text-muted);
-    }
-
-    /* ---------- PROJETOS ---------- */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .project-card {
-      background: var(--bg-soft);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 25px var(--neon-soft);
-    }
-
-    .project-image {
-      height: 180px;
-      background: #000;
-      overflow: hidden;
-    }
-
-    .project-image img,
-    .project-image video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-content {
-      padding: 1.5rem;
-    }
-
-    .project-content h3 {
-      margin-bottom: 0.5rem;
-      color: var(--neon);
-    }
-
-    .project-content p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    /* ---------- SERVIÇOS ---------- */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-    }
-
-    .service {
-      padding: 2rem;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #0b0b0b, #050505);
-      border: 1px solid rgba(0,255,136,0.15);
-    }
-
-    .service h3 {
-      color: var(--neon);
-      margin-bottom: 0.5rem;
-    }
-
-    .service p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* ---------- CONTATO ---------- */
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      margin-bottom: 2rem;
-      color: var(--text-muted);
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    @media (max-width: 600px) {
-      section {
-        padding: 4rem 6%;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div>
-      <h1>DANIEL ALONSO</h1>
-      <p>Desenvolvedor Front-End</p>
-      <a href="#projects" class="btn">Ver projetos →</a>
-    </div>
-  </header>
+<header>
 
-  <!-- SOBRE -->
-  <section class="about">
-    <h2>Sobre mim</h2>
-    <p>
-      Me chamo Daniel Alonso, tenho 18 anos e sou apaixonado por criação de sites e design.
-    </p>
-  </section>
+<h1>Daniel Alonso</h1>
 
-  <!-- PROJETOS -->
-  <section id="projects">
-    <h2>Projetos</h2>
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#projetos">Projetos</a>
+<a href="#skills">Competências</a>
+<a href="#contato">Contato</a>
+</nav>
 
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="img/image.png" alt="Projeto Hamburgueria">
-        </div>
-        <div class="project-content">
-          <h3>Projeto 01</h3>
-          <p>Site para uma hamburgueria artesanal.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <video 
-            src="img/Igreja Batista da Fé - Google Chrome 2026-01-07 16-35-42.mp4"
-            autoplay
-            muted
-            loop
-            playsinline>
-          </video>
-        </div>
-        <div class="project-content">
-          <h3>Projeto 02</h3>
-          <p>Website institucional para igreja.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <video 
-            src="img/Apple - Google Chrome 2026-01-07 16-43-19.mp4"
-            autoplay
-            muted
-            loop
-            playsinline>
-          </video>
-        </div>
-        <div class="project-content">
-          <h3>Projeto 03</h3>
-          <p>Réplica do site de Natal da Apple.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section>
-    <h2>Serviços</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Web Design</h3>
-        <p>Layouts modernos e responsivos.</p>
-      </div>
-      <div class="service">
-        <h3>Design Personalizado</h3>
-        <p>Páginas focadas no seu estilo.</p>
-      </div>
-      <div class="service">
-        <h3>Full Stack</h3>
-        <p>Do visual ao backstage do seu site.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contact">
-    <h2>Contato</h2>
-    <p>Entre em contato para projetos ou parcerias.</p>
-    <a href="https://wa.me/5511945046808" class="btn">Fale comigo →</a>
-  </section>
-
-  <footer>
-    © 2026 • Daniel Alonso • Web Designer
-  </footer>
+</header>
 
 
-  
+<section class="hero">
+
+<h2 id="typing"></h2>
+
+<p>Criação de sites modernos, responsivos e funcionais.</p>
+
+</section>
+
+
+
+<section id="sobre" class="sobre">
+
+<h2>Sobre mim</h2>
+
+<p>
+Tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Concílio trabalho e estudos diariamente, sempre buscando evoluir e aprender mais na área de tecnologia. Sou dedicado, gosto de desafios e estou constantemente aprimorando minhas habilidades para criar soluções digitais eficientes e transformar ideias em projetos reais.
+
+</section>
+
+
+
+<section id="projetos" class="projetos">
+
+<h2>Meus Projetos</h2>
+
+<div class="grid-projetos">
+
+<!-- PROJETO 1 -->
+
+<div class="projeto">
+
+<div class="devices">
+
+<div class="macbook">
+
+<img class="tela-mac" src="img/clinicadesktop.jpeg">
+<img class="frame-mac" src="img/macbook.png">
+
+</div>
+
+<div class="iphone">
+
+<img class="tela-phone" src="img/clinicaiphone.jpeg">
+<img class="frame-phone" src="img/iphone.png">
+
+</div>
+
+</div>
+
+<h3>Site Dentista</h3>
+
+<a href="https://github.com/danii-23/dentista-fic" target="_blank" class="btn">
+Ver no GitHub
+</a>
+
+</div>
+
+
+<!-- PROJETO 2 -->
+
+<div class="projeto">
+
+<div class="devices">
+
+<div class="macbook">
+
+<img class="tela-mac" src="img/spburguer.jpeg">
+<img class="frame-mac" src="img/macbook.png">
+
+</div>
+
+<div class="iphone">
+
+<img class="tela-phone" src="img/spburgueriphone.jpeg">
+<img class="frame-phone" src="img/iphone.png">
+
+</div>
+
+
+</div>
+
+<h3>SpBurger</h3>
+
+<a href="https://github.com/danii-23/spburguer" target="_blank" class="btn">
+Ver no GitHub
+</a>
+
+</div>
+
+
+<!-- PROJETO 3 -->
+
+<div class="projeto">
+
+<div class="devices">
+
+<div class="macbook">
+
+<img class="tela-mac" src="img/gerador.jpeg">
+<img class="frame-mac" src="img/macbook.png">
+
+</div>
+
+<div class="iphone">
+
+<img class="tela-phone" src="img/geradoriphone.jpeg">
+<img class="frame-phone" src="img/iphone.png">
+
+</div>
+
+
+</div>
+
+<h3>Gerador de Frases</h3>
+
+<a href="https://github.com/danii-23/geradorDeFrases" target="_blank" class="btn">
+Ver no GitHub
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="skills">
+
+<h2>Competências</h2>
+
+<div class="skills-grid">
+
+<div class="skill">
+
+<i class="fa-brands fa-html5 html"></i>
+<p>HTML</p>
+
+<div class="bolinhas">
+<span class="ativa"></span>
+<span class="ativa"></span>
+<span class="ativa"></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-brands fa-css3-alt css"></i>
+<p>CSS</p>
+
+<div class="bolinhas">
+<span class="ativa"></span>
+<span class="ativa"></span>
+<span class="ativa"></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-brands fa-js js"></i>
+<p>JavaScript</p>
+
+<div class="bolinhas">
+<span class="ativa"></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="freelance" class="freelance">
+
+<h2>Freelance</h2>
+
+<p>
+Precisa de um site moderno, rápido e responsivo para seu negócio?<br>
+Eu desenvolvo landing pages, sites institucionais e páginas para empresas.
+</p>
+
+<div class="freelance-servicos">
+
+<div class="servico">
+<h3>Landing Page</h3>
+<p>Ideal para vendas, anúncios e captação de clientes.</p>
+</div>
+
+<div class="servico">
+<h3>Site para Empresas</h3>
+<p>Sites profissionais para apresentar seu negócio.</p>
+</div>
+
+<div class="servico">
+<h3>Manutenção de Site</h3>
+<p>Atualizações, melhorias e correção de problemas.</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/5511945046808" class="btn">
+Solicitar Orçamento
+</a>
+
+</section>
+
+
+<section id="contato" class="contato">
+
+<h2>Contato</h2>
+
+<div class="links">
+
+<a href="https://www.linkedin.com/in/daniel-alonso-4103733a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="https://github.com/danii-23" target="_blank">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+
+<a href="https://www.instagram.com/dnalonso_?igsh=ODA0dXptOGdjcmpr&utm_source=qr" target="_blank">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a href="daniel alonso (2) (1).pdf" download>
+<i class="fa-solid fa-file"></i> Currículo
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Daniel Alonso</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
