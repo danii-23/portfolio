@@ -40,3 +40,4 @@ setTimeout(typeEffect,80);
 }
 
 typeEffect();
+
