@@ -102,7 +102,7 @@ margin-bottom:70px;
 
 .grid-projetos{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr 1fr;
 gap:120px;
 margin-top:40px;
 justify-items:center;
@@ -110,6 +110,8 @@ justify-items:center;
 
 .projeto{
 max-width:420px;
+width: 100%;
+margin: auto;
 }
 
 /* DEVICES */
@@ -131,7 +133,8 @@ transform:scale(1.05);
 
 .macbook{
 position:relative;
-width:500px;
+width:100%;
+max-width:400px;
 overflow:hidden;
 }
 
@@ -157,9 +160,9 @@ z-index:1;
 
 .iphone{
 position:absolute;
-right:-67px;
+right:-23px;
 bottom:-5px;
-width:200px;
+width:140px;
 }
 
 .frame-phone{
